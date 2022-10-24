@@ -19,3 +19,8 @@ Finished most of the basic function:
  - the simple typeset of Controls
  - judging whether correct answer
  - random word question
+
+ #### version 0.1.1:
+ - updated the rand word-choosing way, which is better than the last version
+ - add all-word-finished page
+  - bug found: when the title-row only contains number, the program will shut down
