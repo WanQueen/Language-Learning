@@ -421,6 +421,7 @@ namespace Language_Learning_Winform_Entry_2
                 buttonSubmit.Visible = false;
                 buttonHint.Visible = false;
                 labelHint.Visible = false;
+                textBoxInput.Visible = false;
                 labelLearningWord.Text = "You finished all the words!";
             }
         }
