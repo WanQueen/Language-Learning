@@ -1,0 +1,27 @@
+E:\D\Programs\C# Program\Language Learning\Language Learning Winform Entry 2\Language Learning Winform Entry 2\bin\Debug\Language Learning Winform.exe.config
+E:\D\Programs\C# Program\Language Learning\Language Learning Winform Entry 2\Language Learning Winform Entry 2\bin\Debug\Language Learning Winform.exe
+E:\D\Programs\C# Program\Language Learning\Language Learning Winform Entry 2\Language Learning Winform Entry 2\bin\Debug\Language Learning Winform.pdb
+E:\D\Programs\C# Program\Language Learning\Language Learning Winform Entry 2\Language Learning Winform Entry 2\bin\Debug\BouncyCastle.Crypto.dll
+E:\D\Programs\C# Program\Language Learning\Language Learning Winform Entry 2\Language Learning Winform Entry 2\bin\Debug\ICSharpCode.SharpZipLib.dll
+E:\D\Programs\C# Program\Language Learning\Language Learning Winform Entry 2\Language Learning Winform Entry 2\bin\Debug\NPOI.dll
+E:\D\Programs\C# Program\Language Learning\Language Learning Winform Entry 2\Language Learning Winform Entry 2\bin\Debug\NPOI.OOXML.dll
+E:\D\Programs\C# Program\Language Learning\Language Learning Winform Entry 2\Language Learning Winform Entry 2\bin\Debug\NPOI.OpenXml4Net.dll
+E:\D\Programs\C# Program\Language Learning\Language Learning Winform Entry 2\Language Learning Winform Entry 2\bin\Debug\NPOI.OpenXmlFormats.dll
+E:\D\Programs\C# Program\Language Learning\Language Learning Winform Entry 2\Language Learning Winform Entry 2\bin\Debug\BouncyCastle.Crypto.xml
+E:\D\Programs\C# Program\Language Learning\Language Learning Winform Entry 2\Language Learning Winform Entry 2\bin\Debug\ICSharpCode.SharpZipLib.pdb
+E:\D\Programs\C# Program\Language Learning\Language Learning Winform Entry 2\Language Learning Winform Entry 2\bin\Debug\ICSharpCode.SharpZipLib.xml
+E:\D\Programs\C# Program\Language Learning\Language Learning Winform Entry 2\Language Learning Winform Entry 2\bin\Debug\NPOI.pdb
+E:\D\Programs\C# Program\Language Learning\Language Learning Winform Entry 2\Language Learning Winform Entry 2\bin\Debug\NPOI.xml
+E:\D\Programs\C# Program\Language Learning\Language Learning Winform Entry 2\Language Learning Winform Entry 2\bin\Debug\NPOI.OOXML.pdb
+E:\D\Programs\C# Program\Language Learning\Language Learning Winform Entry 2\Language Learning Winform Entry 2\bin\Debug\NPOI.OOXML.xml
+E:\D\Programs\C# Program\Language Learning\Language Learning Winform Entry 2\Language Learning Winform Entry 2\bin\Debug\NPOI.OpenXml4Net.pdb
+E:\D\Programs\C# Program\Language Learning\Language Learning Winform Entry 2\Language Learning Winform Entry 2\bin\Debug\NPOI.OpenXml4Net.xml
+E:\D\Programs\C# Program\Language Learning\Language Learning Winform Entry 2\Language Learning Winform Entry 2\bin\Debug\NPOI.OpenXmlFormats.pdb
+E:\D\Programs\C# Program\Language Learning\Language Learning Winform Entry 2\Language Learning Winform Entry 2\obj\Debug\Language Learning Winform.csproj.AssemblyReference.cache
+E:\D\Programs\C# Program\Language Learning\Language Learning Winform Entry 2\Language Learning Winform Entry 2\obj\Debug\Language_Learning_Winform_Entry_2.Form1.resources
+E:\D\Programs\C# Program\Language Learning\Language Learning Winform Entry 2\Language Learning Winform Entry 2\obj\Debug\Language_Learning_Winform.Properties.Resources.resources
+E:\D\Programs\C# Program\Language Learning\Language Learning Winform Entry 2\Language Learning Winform Entry 2\obj\Debug\Language Learning Winform.csproj.GenerateResource.cache
+E:\D\Programs\C# Program\Language Learning\Language Learning Winform Entry 2\Language Learning Winform Entry 2\obj\Debug\Language Learning Winform.csproj.CoreCompileInputs.cache
+E:\D\Programs\C# Program\Language Learning\Language Learning Winform Entry 2\Language Learning Winform Entry 2\obj\Debug\Language Learning Winform.csproj.CopyComplete
+E:\D\Programs\C# Program\Language Learning\Language Learning Winform Entry 2\Language Learning Winform Entry 2\obj\Debug\Language Learning Winform.exe
+E:\D\Programs\C# Program\Language Learning\Language Learning Winform Entry 2\Language Learning Winform Entry 2\obj\Debug\Language Learning Winform.pdb
