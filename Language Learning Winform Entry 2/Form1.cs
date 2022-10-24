@@ -37,8 +37,6 @@ namespace Language_Learning_Winform_Entry_2
         // variables used for every page
         //
         private int page = (int)PAGE_NAME.NONE;
-        private Random rand = new Random();
-        private int randNow = 0;
         private string wordNowLearning = "";
         private string wordCorrect = "";
         private string wordInput = "";
@@ -62,6 +60,13 @@ namespace Language_Learning_Winform_Entry_2
         private Button buttonNext = new Button();
         private TextBox textBoxInput = new TextBox();
         private Label labelHint = new Label();
+        //
+        // variables for random word-choosing
+        //
+        private List<int> all = new List<int>();
+        private Random rand = new Random();
+        private int randNow = 0;
+
 
         //
         // function to change excel file to Datatable
@@ -283,7 +288,12 @@ namespace Language_Learning_Winform_Entry_2
                 this.Controls.Remove(btn);
             }
 
-            randNow = rand.Next(dt.Rows.Count);
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                all.Add(i);
+            }
+
+            RandomWordChoose();
             wordNowLearning = dt.Rows[randNow][1].ToString();
             wordCorrect = dt.Rows[randNow][0].ToString();
             wordHint = dt.Rows[randNow][2].ToString();
@@ -334,7 +344,7 @@ namespace Language_Learning_Winform_Entry_2
             //
             labelHint.Width = labelLearningWord.Width;
             labelHint.Height = labelLearningWord.Height;
-            labelHint.Location = new Point(labelLearningWord.Location.X, textBoxInput.Location.Y + textBoxInput.Height + 50);
+            labelHint.Location = new Point(labelLearningWord.Location.X, textBoxInput.Location.Y - 50);
             labelHint.TextAlign = ContentAlignment.MiddleCenter;
             labelHint.Font = new Font("Arial", 10);
             labelHint.Text = wordHint;
@@ -358,6 +368,8 @@ namespace Language_Learning_Winform_Entry_2
         {
             if (wordInput == wordCorrect)
             {
+                labelHint.Visible = false;
+
                 this.BackColor = Color.FromArgb(46, 139, 87);
                 textBoxInput.BackColor = Color.FromArgb(127, 255, 170);
 
@@ -384,7 +396,7 @@ namespace Language_Learning_Winform_Entry_2
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
-            randNow = rand.Next(dt.Rows.Count);
+            RandomWordChoose();
             wordNowLearning = dt.Rows[randNow][1].ToString();
             wordCorrect = dt.Rows[randNow][0].ToString();
             wordHint = dt.Rows[randNow][2].ToString();
@@ -396,10 +408,32 @@ namespace Language_Learning_Winform_Entry_2
             textBoxInput.BackColor = Color.White;
             textBoxInput.Text = "";
 
-            buttonNext.Visible = false;
-            buttonSubmit.Visible = true;
-            buttonHint.Visible = true;
-            labelHint.Visible = false;
+            if (all.Count > 0)
+            {
+                buttonNext.Visible = false;
+                buttonSubmit.Visible = true;
+                buttonHint.Visible = true;
+                labelHint.Visible = false;
+            }
+            else
+            {
+                buttonNext.Visible = false;
+                buttonSubmit.Visible = false;
+                buttonHint.Visible = false;
+                labelHint.Visible = false;
+                labelLearningWord.Text = "You finished all the words!";
+            }
+        }
+
+        private void RandomWordChoose()
+        {
+            int index = new int();
+            if (all.Count > 0)
+                index = rand.Next(0, all.Count - 1);
+            else
+                return;
+            randNow = all[index];
+            all.RemoveAt(index);
         }
     }
 }
