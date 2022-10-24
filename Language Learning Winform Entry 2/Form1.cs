@@ -110,8 +110,15 @@ namespace Language_Learning_Winform_Entry_2
                     {
                         for (int i = firstRow.FirstCellNum; i < cellCount; ++i)
                         {
+                            firstRow.GetCell(i).SetCellType(CellType.String);
                             DataColumn column = new DataColumn(firstRow.GetCell(i).StringCellValue);
-                            data.Columns.Add(column);
+                            if (!data.Columns.Contains(firstRow.GetCell(i).StringCellValue))
+                                data.Columns.Add(column);
+                            else
+                            {
+                                column.ColumnName = column.ColumnName + i.ToString();
+                                data.Columns.Add(column);
+                            }
                         }
                         startRow = sheet.FirstRowNum + 1;
                     }
