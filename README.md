@@ -25,5 +25,8 @@ Finished most of the basic function:
  - add all-word-finished page
  - bug found (1): when the title-row only contains number, the program will shut down
 
-#### version 0.1.2：
+#### version 0.1.2:
  - fixed the bug (1)
+
+#### version 0.1.3:
+ - realigned mode-choosing page's buttons
