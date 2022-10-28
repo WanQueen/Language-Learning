@@ -50,6 +50,7 @@ namespace Language_Learning_Winform_Entry_2
         // variables needed in mode-chosen page
         //
         private Label labelQuest2 = new Label();
+        private Panel panelModeChoose = new Panel();
         private List<Button> buttonModeChoose = new List<Button>();
         //
         // variables needed in learning page
@@ -254,6 +255,9 @@ namespace Language_Learning_Winform_Entry_2
             page = (int)PAGE_NAME.MODE_CHOSEN_PAGE;
 
             GetExcelSheetName();
+            //
+            // labelQuest2
+            //
             labelQuest2.Width = 800;
             labelQuest2.Height = 100;
             labelQuest2.Location = new Point((int)(0.5 * (this.Width - labelQuest2.Width)), (int)(0.1 * this.Height));
@@ -261,20 +265,47 @@ namespace Language_Learning_Winform_Entry_2
             labelQuest2.Font = new Font("Arial", 20, FontStyle.Bold);
             labelQuest2.Text = "Please choose the sheet you wanna learn";
             this.Controls.Add(labelQuest2);
-            
+            //
+            // panelModeChoose
+            //
+            panelModeChoose.Width = this.Width;
+            panelModeChoose.Height = (int)(this.Height - 150);
+            panelModeChoose.Location = new Point(0, (int)(0.15 * this.Height));
+            panelModeChoose.AutoScroll = true;
+            this.Controls.Add(panelModeChoose);
+            //
+            // buttonModeChoose
+            //
+            int allButtonLocationX = 50;
+            int allButtonLocationY = labelQuest2.Height;
             for (int i = 0; i < sheetNum; i++)
             {
                 Button btn = new Button();
 
-                btn.Width = 100;
-                btn.Height = 50;
-                btn.Location = new Point((int)(0.5 * (this.Width - btn.Width)), labelQuest2.Height + (int)(0.1 * (i + 1) * this.Height));
+                //btn.Width = 100;
+                //btn.Height = 50;
+                btn.AutoSize = true;
+                //btn.Location = new Point((int)(0.5 * (this.Width - btn.Width)), labelQuest2.Height + (int)(0.1 * (i + 1) * this.Height));
                 btn.TextAlign = ContentAlignment.MiddleCenter;
                 btn.Font = new Font("Arial", 20);
                 btn.Text = sheetName[i];
+                btn.Visible = false;
+                panelModeChoose.Controls.Add(btn);
+                if (allButtonLocationX + btn.Width + 50 > this.Width)
+                {
+                    allButtonLocationX = 50;
+                    allButtonLocationY += (int)(btn.Height + 30);
+                    btn.Location = new Point(allButtonLocationX, allButtonLocationY);
+                    allButtonLocationX += (btn.Width + 50);
+                }
+                else
+                {
+                    btn.Location = new Point(allButtonLocationX, allButtonLocationY);
+                    allButtonLocationX += (btn.Width + 50);
+                }
+                btn.Visible = true;
                 btn.Click += ButtonModeChoose_Click;
                 buttonModeChoose.Add(btn);
-                this.Controls.Add(btn);
             }
         }
 
@@ -292,8 +323,9 @@ namespace Language_Learning_Winform_Entry_2
             this.Controls.Remove(labelQuest2);
             foreach (Button btn in buttonModeChoose)
             {
-                this.Controls.Remove(btn);
+                panelModeChoose.Controls.Remove(btn);
             }
+            this.Controls.Remove(panelModeChoose);
 
             for (int i = 0; i < dt.Rows.Count; i++)
             {
