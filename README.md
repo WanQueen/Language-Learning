@@ -29,4 +29,6 @@ Finished most of the basic function:
  - fixed the bug (1)
 
 #### version 0.1.3:
+ - add icon into package
  - realigned mode-choosing page's buttons
+ - now when exception happened at loading file, the MessageBox will be popped and program will be terminated
