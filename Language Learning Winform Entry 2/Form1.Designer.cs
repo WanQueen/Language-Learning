@@ -21,7 +21,7 @@ namespace Language_Learning_Winform_Entry_2
         {
             base.OnResize(e);
 
-            int i = 0;
+            //int i = 0;
             int allButtonLocationX = 0;
             int allButtonLocationY = 0;
             switch (page)
@@ -63,7 +63,7 @@ namespace Language_Learning_Winform_Entry_2
                     buttonSubmit.Location = new Point((int)(0.25 * (this.Width - 2 * buttonSubmit.Width)), (int)(0.7 * this.Height));
                     buttonHint.Location = new Point((int)(0.75 * (this.Width - 2 * buttonHint.Width) + buttonHint.Width), (int)(0.7 * this.Height));
                     textBoxInput.Location = new Point((int)(0.5 * (this.Width - textBoxInput.Width)), (int)(0.5 * this.Height));
-                    labelHint.Location = new Point(labelLearningWord.Location.X, textBoxInput.Location.Y + textBoxInput.Height + 50);
+                    labelHint.Location = new Point(labelLearningWord.Location.X, textBoxInput.Location.Y + textBoxInput.Height);
                     buttonNext.Location = buttonSubmit.Location;
 
                     break;

@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Language_Learning_Winform;
 using NPOI;
 using NPOI.HSSF.UserModel;
 using NPOI.SS.UserModel;
@@ -72,7 +73,7 @@ namespace Language_Learning_Winform_Entry_2
         //
         // function to change excel file to Datatable
         //
-        public static DataTable ExcelToDatatable(string fileName, string sheetName, bool isFirstRowColumn)
+        public DataTable ExcelToDatatable(string fileName, string sheetName, bool isFirstRowColumn)
         {
             ISheet sheet = null;
             DataTable data = new DataTable();
@@ -81,10 +82,10 @@ namespace Language_Learning_Winform_Entry_2
             IWorkbook workbook = null;
             int cellCount = 0;
             int rowCount = 0;
+
             try
             {
                 fs = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-
                 if (fileName.IndexOf(".xlsx") > 0)
                 {
                     workbook = new XSSFWorkbook(fs);
@@ -165,6 +166,18 @@ namespace Language_Learning_Winform_Entry_2
             IWorkbook workbook = null;
             FileStream fs;
 
+            try
+            {
+                fs = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+            }
+            catch (Exception ex)
+            {
+                this.Hide();
+                MessageBox.Show(ex.Message);
+                this.Close();
+                Environment.Exit(Environment.ExitCode);
+            }
+
             fs = new FileStream(fileName, FileMode.Open, FileAccess.Read);
 
             if (fileName.IndexOf(".xlsx") > 0) // 2007版本
@@ -201,7 +214,6 @@ namespace Language_Learning_Winform_Entry_2
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
-            page = (int)PAGE_NAME.START_PAGE;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -383,7 +395,7 @@ namespace Language_Learning_Winform_Entry_2
             //
             labelHint.Width = labelLearningWord.Width;
             labelHint.Height = labelLearningWord.Height;
-            labelHint.Location = new Point(labelLearningWord.Location.X, textBoxInput.Location.Y - 50);
+            labelHint.Location = new Point(labelLearningWord.Location.X, textBoxInput.Location.Y + textBoxInput.Height);
             labelHint.TextAlign = ContentAlignment.MiddleCenter;
             labelHint.Font = new Font("Arial", 10);
             labelHint.Text = wordHint;
